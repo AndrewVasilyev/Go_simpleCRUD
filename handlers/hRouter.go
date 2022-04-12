@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"GO_PROJ/db"
+	"GO_SIMPLECRUD/db"
 	"net/http"
 
 	"github.com/gorilla/mux"

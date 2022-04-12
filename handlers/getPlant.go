@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"GO_PROJ/models"
+	"GO_SIMPLECRUD/models"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -27,7 +27,7 @@ func (h dbHandler) GetPlant(w http.ResponseWriter, r *http.Request) {
 
 		w.Header().Add("Content-Type", "application/json")
 		w.WriteHeader(http.StatusNotFound)
-		json.NewEncoder(w).Encode("Defined plant was not found")
+		json.NewEncoder(w).Encode("Defined plant was not found") //.SetIndent("error", "Defined plant was not found")
 
 		return
 	}

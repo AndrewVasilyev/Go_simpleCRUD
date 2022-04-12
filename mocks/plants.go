@@ -1,7 +1,7 @@
 package mocks
 
 import (
-	"GO_PROJ/models"
+	"GO_SIMPLECRUD/models"
 )
 
 var Plants = []models.Plants{

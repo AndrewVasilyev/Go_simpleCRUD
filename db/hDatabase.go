@@ -1,7 +1,7 @@
 package db
 
 import (
-	"GO_PROJ/models"
+	"GO_SIMPLECRUD/models"
 	"log"
 	"os"
 

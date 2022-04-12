@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"GO_PROJ/models"
+	"GO_SIMPLECRUD/models"
 	"encoding/json"
 	"io/ioutil"
 	"log"
