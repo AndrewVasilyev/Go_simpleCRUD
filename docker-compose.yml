@@ -1,0 +1,19 @@
+version: "4.7"
+
+services:
+  database:
+    container_name: plants_database
+    image: postgres:14
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=test_db
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_test_data:/var/lib/postgresql/data 
+
+volumes:
+  postgres_test_data:
+    name: postgres_test_data
