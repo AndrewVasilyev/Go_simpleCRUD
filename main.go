@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GO_PROJ/handlers"
+	"GO_SIMPLECRUD/handlers"
 	"log"
 	"net/http"
 )
