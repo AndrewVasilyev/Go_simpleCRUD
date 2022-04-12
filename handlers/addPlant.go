@@ -27,13 +27,13 @@ func (h dbHandler) AddPlant(w http.ResponseWriter, r *http.Request) {
 
 		w.Header().Add("Content-Type", "application/json")
 		w.WriteHeader(http.StatusNotImplemented)
-		json.NewEncoder(w).Encode("Record Can Not Be Created")
+		json.NewEncoder(w).Encode(map[string]string{"error": "Record Can Not Be Created"})
 
 		return
 	}
 
 	w.Header().Add("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Encode("Record Created Successfuly")
+	json.NewEncoder(w).Encode(map[string]string{"data": "Record Created Successfuly"})
 
 }

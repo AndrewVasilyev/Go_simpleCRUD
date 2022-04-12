@@ -13,12 +13,12 @@ func (h dbHandler) GetAllPlants(w http.ResponseWriter, r *http.Request) {
 	if result := h.DB.Find(&plants); result.Error != nil {
 		w.Header().Add("Content-Type", "application/json")
 		w.WriteHeader(http.StatusNotFound)
-		json.NewEncoder(w).Encode("Can Not Represent Plants")
+		json.NewEncoder(w).Encode(map[string]string{"error": "Can Not Represent Plants"})
 
 		return
 	}
 
 	w.Header().Add("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(plants)
+	json.NewEncoder(w).Encode(map[string]any{"plant": plants})
 }
